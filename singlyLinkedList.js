@@ -43,5 +43,24 @@ class SinglyLinkedList {
 			current = current.next;
 		}
 	}
+
+	removeNode(data) {
+		let previous = this.head;
+		let current = this.head;
+		while (current) {
+			if (current.data === data) {
+				if (current === this.head) {
+					this.head = this.head.next;
+				}
+				if (current === this.tail) {
+					this.tail = previous
+				} 
+				previous.next = current.next;
+			} else {
+				previous = current;
+			}
+			currnet = current.next;
+		}
+	}
 }
 
