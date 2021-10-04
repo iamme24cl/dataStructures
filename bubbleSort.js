@@ -1,4 +1,8 @@
-
+/**
+BubbleSort - Time Complexity
+Time: best - O(n), Avg - O(n^2), Worse n- O(n^2)
+Space: Worst O(1)
+**/
 
 function bubbleSort(array) {
   // First we need to check if we need to swap at all
