@@ -1,4 +1,7 @@
 /**
+Merge sort sorts lists by breaking them down, sorting then and then merging
+the sorted lists. It divides the array into halves, and then merges these halves.
+
 MergeSort - Time Complexity
 Time: best - O(n log(n)), Avg - O(n log(n)), Worse - O(n log(n))
 Space: Worst O(n)
