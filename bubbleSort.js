@@ -1,4 +1,8 @@
 /**
+This algorithm starts with the first element in the array until the last
+element in the array, and keeps on doing so until there in one complete
+pass without swapping.
+
 BubbleSort - Time Complexity
 Time: best - O(n), Avg - O(n^2), Worse n- O(n^2)
 Space: Worst O(1)
