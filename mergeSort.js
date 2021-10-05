@@ -1,6 +1,6 @@
 /**
 MergeSort - Time Complexity
-Time: best - O(n log(n)), Avg - O(n log(n)), Worse n- O(n log(n))
+Time: best - O(n log(n)), Avg - O(n log(n)), Worse - O(n log(n))
 Space: Worst O(n)
 **/
 function mergeSort(array) {
