@@ -13,10 +13,40 @@ Radix sort is used to sort numbers, and works by sorting the least significant
 number to the most significant number.
 
 RadixSort - Time Complexity
-Time: best - O(n + k), Avg - O(n + k), Worse n- O(n^2)
-Space: Worst O(n)
+Time: best - O(nk), Avg - O(nk), Worse - O(nk)
+Space: Worst O(n + k)
 **/
 
 function radixSort(array) {
-  
+  const max = Math.max(...array).toString().length;
+  let digitBuckets = [];
+  let index = 0;
+
+  for (let i = 0; i < max + 1; i++) {
+    digitBuckets = [];
+    for (let j = 0; j < list.length; j++) {
+      const digit = getDigit(array[j], i + 1);
+      digitBuckets[digit] = digitBuckets[digit] || [];
+      digitBuckets[digit].push(array[j]);
+    }
+
+    let idx = 0;
+    for (let t = 0; t < digitBuckets.length; t++) {
+      if (digitBuckets[t] && digitBuckets[t].length > 0) {
+        for (let m = 0; m < digitBuckets[t].length; m++) {
+          array[idx++] = digitBuckets[t][m];
+        }
+      }
+    }
+  }
+  return array;
+}
+
+function getDigit(num, nth) {
+  let value = 0;
+  while (nth--) {
+    value = num % 10;
+    num = Math.floor((num - value) / 10);
+  }
+  return value;
 }
